@@ -40,7 +40,7 @@ function Tweet() {
 }
 
 function Message() {
-  return <div className="message">This is less than 140 characters.</div>;
+  return <div className="message">This is less than 150 characters.</div>;
 }
 
 function NameWithHandle() {
