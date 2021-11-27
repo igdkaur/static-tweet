@@ -1,12 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-function Tweet() {
-return (
-<div className="tweet">
-Tweet
-</div>
-);
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+
+function Avatar() {
+  return (
+    <img
+      src="https://www.gravatar.com/avatar/nothing"
+      className="avatar"
+      alt="avatar"
+    />
+  );
 }
-ReactDOM.render(<Tweet/>,
-document.querySelector('#root'));
+
+function Tweet() {
+  return (
+    <div className="tweet">
+      <Avatar />
+      <div className="content">
+        <NameWithHandle />
+        <Message />
+      </div>
+    </div>
+  );
+}
+
+function Message() {
+  return <div className="message">This is less than 140 characters.</div>;
+}
+
+function NameWithHandle() {
+  return (
+    <span className="name-with-handle">
+      <span className="name">Kapil</span>
+      <span className="handle">@yourKapil</span>
+    </span>
+  );
+}
+
+ReactDOM.render(<Tweet />, document.querySelector("#root"));
